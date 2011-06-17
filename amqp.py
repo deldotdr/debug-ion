@@ -107,6 +107,10 @@ class AMQPProtocol(AMQClient):
         log.msg('Reschedule check heartbeat')
         AMQClient.reschedule_checkHB(self)
 
+    def sendHeartbeat(self):
+        log.msg('sendHeartbeat')
+        AMQClient.sendHeartbeat(self)
+
  
 class ConnectionCreator(object):
     """Create AMQP Client.
